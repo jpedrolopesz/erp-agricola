@@ -13,6 +13,9 @@ struct erpApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
+            Produtor.self,
+            Area.self,
+            LancamentoCusto.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -26,6 +29,7 @@ struct erpApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+              
         }
         .modelContainer(sharedModelContainer)
     }
